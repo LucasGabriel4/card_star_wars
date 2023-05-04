@@ -1,0 +1,143 @@
+
+$gradient: linear-gradient(102.32deg, #030422 -2.74%, #090114 101.6%);
+$gradient-card: linear-gradient(90.24deg, rgba(14, 23, 101, 0.45) 0%, rgba(53, 14, 88, 0.45) 98.1%), #121214;
+$overlay:  linear-gradient(90.24deg, rgba(14, 23, 101, 0.85) 0%, rgba(53, 14, 88, 0.85) 98.1%);
+$text-shadow:  0px 0px 8px rgba(255, 255, 255, 0.4);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html, body{
+    height: 100%
+}
+
+body{
+    background: $gradient;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+.card__rey-skywalker{
+    width: 436px;
+    height: 608px;
+    border-radius: 20px;
+    background: $gradient-card;
+    position: relative;
+    background-image: url('../assets/Image.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    &::before{
+        content: 'FINN';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 348px;
+        height: 486.4px;
+        left:-225px;
+        top: 65px;
+         z-index: -1;
+        border-radius: 16px;
+        font-size: 2rem;
+        // opacity: 0.9;
+        background-image: url('../assets/Finn.svg');
+        background-size: cover;
+        font-weight: 700;
+        -webkit-text-stroke-width: 1px; /* largura da borda */
+        -webkit-text-stroke-color: #312D74; /* cor da borda */
+        color: transparent;
+    }
+    &::after{
+        content: 'BB-8';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 348px;
+        height: 486.4px;
+        left:300px;
+        top: 65px;
+        z-index: -1;
+        border-radius: 16px;
+        font-size: 2rem;
+        padding-left: 10px;
+        background-image: url('../assets/BB-8.svg');
+        background-size: cover;
+        font-weight: 700;
+        -webkit-text-stroke-width: 1px; /* largura da borda */
+        -webkit-text-stroke-color: #312D74; /* cor da borda */
+        color: transparent;
+    }
+    
+    &::after:hover{
+        height: 100px;
+    }
+  
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: $overlay;
+    .rey__skywalker-background{
+        width: 427px;
+        height: 558px;
+        background-image: url('../assets/Character.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: -103px;
+    }
+}
+
+.content__card{
+    padding: 48px 0 0 40px;
+    
+    h1{
+        color: #ECE4EF;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 0.08rem;
+        text-shadow: $text-shadow;
+        margin-bottom: 16px;
+    }
+
+    p{
+        max-width: 263px;
+        font-size: 0.875rem;
+        color: #D8CEDE;
+        font-weight: 400;
+    }
+}
+
+
+.info__character{
+    margin-top: 60px;
+    h2{
+        color: #9C83A7;
+        font-size: 0.875rem;
+    }
+
+    p{
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    p:nth-of-type(1), p:nth-of-type(5){
+       width: 198px;
+    }
+}
+
+
